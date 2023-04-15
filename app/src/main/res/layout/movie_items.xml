@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movieLayout"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:background="#9F0B0B"
+        app:layout_constraintCircleRadius="@dimen/cardview_default_radius">
+
+        <ImageView
+            android:id="@+id/movie_Seat_Icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/baseline_event_seat_24"
+            app:layout_constraintBottom_toBottomOf="@+id/seats_remaining"
+            app:layout_constraintEnd_toStartOf="@+id/seats_remaining"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/runningTime"
+            app:layout_constraintTop_toTopOf="@+id/seats_remaining"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/baseline_event_seat_24" />
+
+        <TextView
+            android:id="@+id/stars"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FFE6DADA"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textViewStar"
+            app:layout_constraintTop_toTopOf="@+id/textViewStar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/runTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#E6DADA"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/runningTime"
+            app:layout_constraintEnd_toStartOf="@+id/movie_Seat_Icon"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/runningTime"
+            app:layout_constraintTop_toTopOf="@+id/runningTime"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FFE6DADA"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_image" />
+
+        <TextView
+            android:id="@+id/textViewStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/allerta"
+            android:text="Starring : "
+            android:textColor="#E3DADA"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+        <TextView
+            android:id="@+id/runningTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/allerta"
+            android:text="Running Time : "
+            android:textColor="#EFEBEB"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewStar" />
+
+        <TextView
+            android:id="@+id/seats_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FFE6DADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stars" />
+
+        <TextView
+            android:id="@+id/movie_certif"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/icons8_filled_circle_50"
+            android:fontFamily="@font/allerta"
+            android:paddingTop="10dp"
+            android:text="PG-13"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_title"
+            app:layout_constraintStart_toEndOf="@+id/movie_title"
+            app:layout_constraintTop_toTopOf="@+id/movie_title"
+            app:layout_constraintVertical_bias="0.769" />
+
+        <TextView
+            android:id="@+id/movie_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#090606"
+            android:fontFamily="@font/allerta"
+            android:text="@string/filling_fast"
+            android:textColor="#FFE500"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/stars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/movie_certif"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

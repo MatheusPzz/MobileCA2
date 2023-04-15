@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#830303">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/palco_vazio_iluminado_com_cortina_vermelha_do_piso_de_madeira_brilhante_material_pendurado_ilustra__o_vetorial_de_holofote___vetor_gr_tis" />
+
+    <ImageView
+        android:id="@+id/movie_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="12dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button_back_img"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FBFBFB"
+        android:drawableTop="@drawable/baseline_arrow_back_24"
+        android:drawablePadding="25dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:background="#1B1717"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/plus_button"
+            android:layout_width="30dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:backgroundTint="#F1F1F1"
+            android:drawableTop="@drawable/iconmonstr_plus_lined"
+            app:layout_constraintBottom_toBottomOf="@+id/minus_button"
+            app:layout_constraintStart_toEndOf="@+id/minus_button"
+            app:layout_constraintTop_toTopOf="@+id/minus_button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/minus_button"
+            android:layout_width="30dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#ECEAEA"
+            android:drawableTop="@drawable/iconmonstr_line_one_horizontal_lined"
+            android:shadowColor="#00F61010"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8"
+            app:strokeColor="@color/teal_700" />
+
+        <ImageView
+            android:id="@+id/movie_Seat_Icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:layout_constraintBottom_toBottomOf="@+id/plus_button"
+            app:layout_constraintEnd_toStartOf="@+id/seats_remaining"
+            app:layout_constraintHorizontal_bias="0.864"
+            app:layout_constraintStart_toEndOf="@+id/plus_button"
+            app:layout_constraintTop_toTopOf="@+id/plus_button"
+            app:layout_constraintVertical_bias="0.65"
+            app:srcCompat="@drawable/baseline_event_seat_24"
+            tools:srcCompat="@drawable/baseline_event_seat_24" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_certif"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/badge"
+            android:backgroundTint="#E1CA00"
+            android:fontFamily="@font/allerta"
+            android:paddingTop="10dp"
+            android:text="PG-13"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_title"
+            app:layout_constraintStart_toEndOf="@+id/movie_title"
+            app:layout_constraintTop_toTopOf="@+id/movie_title"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/textViewStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/allerta"
+            android:text="Starring:"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_certif" />
+
+        <TextView
+            android:id="@+id/stars"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="17dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FF878282"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStar"
+            app:layout_constraintTop_toTopOf="@+id/textViewStar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/allerta"
+            android:text="Running Time:"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/textViewStar"
+            app:layout_constraintTop_toBottomOf="@+id/stars" />
+
+        <TextView
+            android:id="@+id/runTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FF878282"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/allerta"
+            android:text="Select Seats:"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/movie_desc" />
+
+        <TextView
+            android:id="@+id/movie_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="25dp"
+            android:ems="20"
+            android:fontFamily="@font/allerta"
+            android:textColor="#F6F6F6"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.053" />
+
+        <TextView
+            android:id="@+id/seats_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allerta"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_Seat_Icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toEndOf="@+id/plus_button"
+            app:layout_constraintTop_toTopOf="@+id/movie_Seat_Icon"
+            app:layout_constraintVertical_bias="0.13" />
+
+        <TextView
+            android:id="@+id/selected_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/minus_button"
+            app:layout_constraintEnd_toStartOf="@+id/plus_button"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toEndOf="@+id/minus_button"
+            app:layout_constraintTop_toTopOf="@+id/minus_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
